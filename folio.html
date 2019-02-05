@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Tim's Folio </title>
+</head>
+
+<style>
+
+
+/* Style the tab */
+
+.tab {
+  display: flex;
+  justify-content: space-between;
+    align-self: center;
+    width: 80%;
+overflow: hide;
+margin: 0 auto;
+text-align: center;
+border-spacing: 4px;
+margin: 0 auto;
+
+  align-self: center;
+  width: 80%;
+  height: 20%;
+}
+
+
+
+/* Style the buttons inside the tab */
+.tab button {
+background-color: #F8ECC2;
+border: none;
+display: flex;
+outline: none;
+cursor: pointer;
+border-radius: 15px 15px 0px 0px;
+padding: 14px;
+width: 100%;
+transition: 0.3s;
+font-size: 17px;
+border: 1px solid black;
+
+
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+background-color: #ddd;
+border-radius: 15px 15px 0px 0px;
+box-shadow: 5px 0px 5px #888888;
+
+
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+background-color: white;
+border-radius: 15px 15px 0px 0px;
+box-shadow: 5px 0px 5px #888888;
+overflow: hide;
+border: 1px solid black;
+
+
+}
+
+/* Style the tab content */
+.tabcontent {
+display: none;
+background-color: white;
+box-sizing: border-box;
+outline:1px solid black;
+border: 15px solid #F8ECC2;
+width: 80%;
+margin: 0 auto;
+padding:20px;
+box-shadow: 5px 10px 5px #888888;
+
+
+}
+
+
+
+</style>
+
+<script>
+
+var tabs = ["About me","Resume", "Portfolio", "Code", "Contact" ]
+
+/*
+function openTab(tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  event.currentTarget.className += " active";
+}
+*/
+
+function Menu(){
+
+  this.openTab = function(tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    event.currentTarget.className += " active";
+  }
+}
+
+
+
+function createMenu(){
+  var myMenu = new Menu();
+  var menuElement = document.getElementById("menu");
+  menuElement.className = "tab";
+  for (var i = 0; i < tabs.length;i++){
+    var button = document.createElement("button");
+    button.className= "tablinks";
+    button.innerHTML = tabs[i];
+    button.onclick = function(){
+      myMenu.openTab(this.innerHTML)
+    };
+    menuElement.appendChild(button);
+  }
+  myMenu.openTab(tabs[0]);
+
+}
+
+
+
+</script>
+
+<body onload="createMenu()">
+<script>
+</script>
+
+
+
+<div id = "menu"></div>
+
+
+  <div id="About me" class="tabcontent">
+    <h3>About me</h3>
+    <p>About me</p>
+  </div>
+
+  <div id="Resume" class="tabcontent">
+    <h3>Resume</h3>
+    <p>Resume</p>
+  </div>
+
+  <div id="Portfolio" class="tabcontent">
+    <h3>Portfolio</h3>
+    <p>Portfolio</p>
+  </div>
+
+  <div id="Code" class="tabcontent">
+    <h3>Code</h3>
+    <p>Code</p>
+  </div>
+
+  <div id="Contact" class="tabcontent">
+    <h3>Contact</h3>
+    <p>Contact</p>
+  </div>
+
+
+</body>
+
+
+</html>

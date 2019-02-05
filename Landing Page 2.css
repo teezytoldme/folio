@@ -1,0 +1,266 @@
+.main-body,
+.alt-body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-color: #000000;
+    border: 1px solid #000000;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    overflow: hidden;
+    position: relative;
+    background-image: url("/Users/laurenmcdonald/Documents/Noomr/in-home-camera-set-up_4460x4460.jpg");
+    background-size: cover;
+    background-position: 0px -50px;
+    background-origin: padding-box;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+.alt-body {
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+}
+
+.main-title,
+.alt-main-title {
+    font-family: "Josefin Sans";
+}
+
+.main-subtitle,
+.main-text,
+.main-input,
+.alt-main-subtitle,
+.alt-main-text,
+.alt-main-input,
+.alt-input,
+.sign-in-text,
+.sign-in,
+.sign-in:hover,
+.pwd-reset,
+.pwd-reset:hover,
+.create-acct,
+.create-acct:hover,
+.error-text {
+    font-family: Lato;
+}
+
+.main-title,
+.alt-main-title {
+    font-size: 108px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.alt-main-title {
+    color: #000000;
+    padding-top: 175px;
+}
+
+.main-subtitle,
+.alt-main-subtitle,
+.alt-main-text {
+    height: 40px;
+    font-size: 38px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.main-text,
+.sign-in-text,
+.sign-in,
+.sign-in:hover {
+    font-size: 20px;
+    color: #1CFC05;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sign-in-text {
+    text-align: right;
+    padding-top: 20px;
+}
+
+.sign-in,
+.sign-in:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: right;
+    padding-top: 20px;
+}
+
+.sign-in:hover {
+    font-weight: normal;
+}
+
+.alt-main-subtitle,
+.alt-main-text {
+    font-size: 18px;
+    color: #000000;
+}
+
+.alt-main-text {
+    vertical-align: top;
+    text-align: justify;
+    font-weight: normal;
+}
+
+.main-filler,
+.alt-filler {
+    width: 100%;
+    height: 100%;
+    padding-top: 110px;
+}
+
+.alt-filler {
+    padding-top: 100px;
+}
+
+.main-input,
+.alt-main-input {
+    font-weight: bold;
+    font-size: 20px;
+    height: 24px;
+    background-color: transparent;
+    border: 2px solid #FFFFFF;
+    border-radius: 2px;
+}
+
+.alt-main-input {
+    border: 2px solid #000000;
+}
+
+#email-input,
+#password-input {
+    width: 100%;
+    font-family: Lato;
+    font-weight: bold;
+    font-size: 18px;
+    color: #000000;
+    background-color: transparent;
+    border: 0px;
+}
+
+#submit-button,
+#submit-button:hover {
+    width: auto;
+    height: 30px;
+    font-family: Lato;
+    font-weight: bold;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: #FF0000;
+    border: none;
+    border-radius: 2px;
+}
+
+#submit-button:hover {
+    color: #FF0000;
+    background-color: #FFFFFF;
+    border: 2px solid #FF0000;
+}
+
+.alt-input {
+    width: 100%;
+    font-weight: bold;
+    font-size: 18px;
+    color: #000000;
+    background-color: transparent;
+    border: 0px;
+}
+
+.pwd-reset,
+.pwd-reset:hover {
+    font-weight: bold;
+    font-size: 12px;
+    text-decoration: none;
+    color: #000000;
+    height: 14px;
+    white-space: nowrap;
+}
+
+.pwd-reset:hover {
+    font-weight: normal;
+}
+
+.create-acct,
+.create-acct:hover {
+    padding: 10px;
+    height: 100%;
+    font-weight: bold;
+    font-size: 32px;
+    text-decoration: none;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #FF0000;
+    border: none;
+    border-radius: 2px;
+    white-space: nowrap;
+}
+
+.create-acct:hover {
+    color: #FF0000;
+    background-color: #FFFFFF;
+    border: 2px solid #FF0000;
+}
+
+.error-text {
+    font-weight: bold;
+    font-size: 14px;
+    height: 18px;
+    color: #FF0000;
+    text-align: center;
+}
+
+.simple-centered-body {
+    width: 100%;
+    height: 100%;
+    margin: 0px auto 0px auto;
+}
+
+.simple-table,
+.simple-table-10,
+.simple-table-30,
+.simple-table-55,
+.simple-table-70,
+.title-table {
+    width: 100%;
+    height: *;
+    margin: 0px auto 0px auto;
+    table-layout: fixed;
+}
+
+.simple-table-10 {
+    width: 10%;
+}
+
+.simple-table-30 {
+    width: 30%;
+    table-layout: auto;
+}
+
+.simple-table-55 {
+    width: 55%;
+}
+
+.simple-table-70 {
+    width: 70%;
+}
+
+.title-table {
+    margin: 105px auto 0px auto;
+}
+
+#spaced-table {
+    border-collapse: separate;
+    border-spacing: 25px;
+}
