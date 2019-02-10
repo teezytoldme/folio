@@ -191,7 +191,6 @@ iframe {
 }
 
 
-
 </style>
 
 <script>
@@ -224,7 +223,6 @@ function TabSet(){
       button.className= "tablinks";
       button.innerHTML = tabs[i];
       button.onclick = function(){
-        // right here is where i'm struggling.
            tabset.openTab(this.innerHTML);
       };
       menuElement.appendChild(button);
@@ -237,7 +235,7 @@ function TabSet(){
 
 function createTabSet(){
   var myTabSet = new TabSet();
-  var tabs = ["About me","Resume", "FarmApp Case Study", "NOOMR Case Study","Code", "Contact" ];
+  var tabs = ["Me","Resume", "FarmApp Case Study", "NOOMR Case Study","Code", "Contact" ];
   myTabSet.create(tabs);
 }
 
@@ -254,14 +252,33 @@ function createTabSet(){
 <div id = "menu"></div>
 
 
-  <div id="About me" class="tabcontent">
-    <h3>About me</h3>
-    <p>About me</p>
+  <div id="Me" class="tabcontent">
+    <div class="row">
+      <div class="column">
+        <p>
+          <img src="Images/ProfilePicture.jpg"style="width:60%">
+        </p>
+      </div>
+        <div class="column">
+          <p>
+            <h1>Hi</h1>
+            Welcome to my website.<br><br>
+
+            My names is Tim Orchard. I'm a reformed recruiter turned UXer.
+
+            <br><br>
+
+            Please, take a look at some of the work I've done and tell me what you think!
+      </div>
+    </div>
+
   </div>
 
   <div id="Resume" class="tabcontent">
-    <h3>Resume</h3>
-    <p>Resume</p>
+
+    <p>
+      <embed src="Images/TimOrchardResume.pdf" type="application/pdf" width="100%" height="600px" />
+</p>
   </div>
 
   <div id="FarmApp Case Study" class="tabcontent">
@@ -413,6 +430,7 @@ Some of the key challenges were;
       Based on our research we were able to produce a flow of the Farmers Journey, the FarmApp Journey,
       and develop a FarmApp Customer Journey.
   </p>
+
   <div class="slideshow-container">
 
 <div class="mySlides">
@@ -489,6 +507,7 @@ function showSlides(n) {
   Based on this hypothesis we developed a Customer Service Blueprint to help the team at FarmApp with a formalized approach to what needed to be done and by whom.
   We also developed a new proposed Customer Customer Journey, broken down into specific areas so the team would know exactly where in the processs they are with every customer and what the next step should be. You can see this all broken down in the presentation below.<br><br>
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSMPsAprtnPhsYO0B_9lxQoqAiAhjxOwajIqJhJCbzAh3CWg2O0C5p-DWisngu7ZR67gs8ra0Q39-SZ/embed?start=false&loop=false&delayms=60000" frameborder="0" width="600" height="366" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<br><br><br><br>
 
 </div>
 
@@ -539,17 +558,158 @@ function showSlides(n) {
               </ul>
             </li>
           </ul>
+          <br>
+          <img src= "Images/MovieSet.jpg"style="width:80%"><br>
+          <img src= "Images/Director2.jpg"style="width:80%"><br>
+
         </p>
       </div>
     <div class="column">
       <p>
         <img src= "Images/Director.jpg"style="width:80%"><br>
         <img src= "Images/Crew.jpg" style="width:80%">
+        <h4> On organising events</h4>
+        <ul>
+          <li>Typically goes through this process, roughly;</li>
+          <ul>
+            <li>Receive request or bid</li>
+            <li>Contact diary service to check availability of staff or staffing agency.</li>
+            <ul>
+              <li>Staffing agency will call around to see who’s available and at what rates, or already have access to a calendar.</li>
+              <li>Diary service only checks if a specific person is available at a specific time by looking in their calendar.</li>
+            </ul>
+            <li>Give quote for the bid</li>
+            <li>Bid approved</li>
+            <li>Put crew on hold</li>
+              <ul>
+                <li>This is done by contacting the staffing agency or diary service.</li>
+              </ul>
+            <li>Budget gets approved</li>
+            <li>Crew is locked in.</li>
+              <ul>
+                <li>Again this is done by contacting the staffing agency or diary service.</li>
+                <li style="padding-bottom: 10px;"> this is often where replacements need to be found on short notice.</li>
+              </ul>
+            </ul>
+            <li>Everyone did this on a laptop in an office</li>
+            <ul>
+              <li style="padding-bottom: 10px;">Very rarely was this done in the field though if it was it was done on a mobile phone and only to find last minute replacements.</li>
+            </ul>
+            <li style="padding-bottom: 10px;">Often they have at least a couple productions on the go at any one time</li>
+            <li style="padding-bottom: 10px;">Often they find it difficult to get a hold of a staffing agency or diary service on the weekends, which is when many productions take place.</li>
+          </ul>
       </p>
     </div>
   </div>
 
+  <p>
+    <h3> Research Conclusions </h3>
+    As you can see from the above, it isn’t the most efficient process in the world. There is a lot of back and forth between the organizers and their various representatives. The main hurdle was checking and confirming availability of multiple contractors, especially with the  “less skilled” crew members, and finding replacements easily and quickly.
+    <br><br>
+    The problem they identified was consistent with what I heard from the NOOMR team and the solution they came up with would go along way addressing a lot of the issues the organizers were having.
+</p>
 
+<p>
+  <h2>Synthesis and Ideation</h2>
+The interviews taught us that the most important problem, and therefore the first to solve was around availability checking.
+<br><br>
+    Having already made some inroads technically into a solution I needed to make use of what had been done already when coming up with solutions.
+<br><br>
+The technology being used for developing the platform converted back end Java code straight into Javascript (or so I understand) which had the benefit of a lot less code needing to be written increasing the speed in which things could get up and running, though this also meant that a lot of the UI components would already be pre designed.
+<br><br>
+With NOOMR being located in Sydney, and myself in Melbourne, I wasnt able to have any continued access to organizers for usability testing. However, as the problem I was solving didnt actually require any actual industry specific knowledge or skills, I was able to conduct tests with friends and family. Although not as ideal as I may have liked, their feedback and hangups did a lot to help with the various iterations I created.
+<br><br>
+Below you can see how the idea changed over time. The prcoess started off with  basic sketches with changes made as more data was gathered and more tests were completed. One of the larger changes was making the availability checking a seperate entity from organizing events. This served the purpose of us devloping an MVP faster(which I will go into later), and was more consistent with the way organizers tend to work which involves a lot of one off searching and finding replacements in a more ad hoc fashion.
+<br><br>
+
+<div class="slideshow-container">
+
+<div class="mySlides1">
+<div class="numbertext"></div>
+<img src="Images/NOOMR1.jpg" style="width:80%">
+
+</div>
+
+<div class="mySlides1">
+<div class="numbertext"></div>
+<img src="Images/NOOMR2.jpg" style="width:60%">
+
+</div>
+
+<div class="mySlides1">
+<div class="numbertext"></div>
+<img src="Images/NOOMR3.jpg"style="width:60%">
+
+</div>
+
+<div class="mySlides1">
+<div class="numbertext"></div>
+<img src="Images/NOOMR4.jpg" style="width:80%">
+
+</div>
+
+<div class="mySlides1">
+<div class="numbertext"></div>
+<img src="Images/NOOMR5.jpg" style="width:80%">
+
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+<span class="dot" onclick="currentSlide1(1)"></span>
+<span class="dot" onclick="currentSlide1(2)"></span>
+<span class="dot" onclick="currentSlide1(3)"></span>
+<span class="dot" onclick="currentSlide1(4)"></span>
+<span class="dot" onclick="currentSlide1(5)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+function currentSlide1(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+var i;
+var slides = document.getElementsByClassName("mySlides1");
+var dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+}
+</script>
+
+<h2> Solutions </h2>
+
+After doing a lot of testing we developed an MVP which we have recently released to a small batch of users for a beta test. I've made some slides going through a basic linear progression which you can see below.
+<br><br>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRT9Slic45VOolg4qwQtrcWsdePNlgVHUwNhbrV-zxVSpOnYBwWnEk0juAIO8F-V5dfWMgLjgORy2ww/embed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<br><br>
+The goal of this beta period is first and foremost to provide a piece of software that we think users can gain value from straight away.
+Through this process we are hoping to gain as much feedback as possible from all of our user base, both crew and organizers, in order to make sure we not only improve what we have, but help prioritize all of our future features and functions.
+<br><br>
+Some of the ideas we are currently considering are around messaging, sending/developing call sheets, refferals and reccomendations and payments systems. We also believe that this solution can be adopted to other industries that need to compare availability organize multiple independent contractors and employees.
+
+
+<br><br><br><br>
 
   </div>
 
